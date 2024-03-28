@@ -1,0 +1,4 @@
+1st command ===> npm init (for creating package.json file)
+2nd cpmmand ===> tsc --init (for creating tsconfig.json file)
+3rd command ===> npm i inquirer 
+4th command ===> npm i --save-dev @types/inquirer 
