@@ -1,0 +1,20 @@
+ #Commands
+ for tsconfig file =====> tsc --init 
+ for cleaning terminal ====> cls
+ for package.json file ====> npm init
+ for install inquirer ====> npm i inquirer
+ for inquirertypes ====> npm i --save-dev @types/inquirer
+
+ add "type" : "module" in package.json file after "main"
+ changing in tsconfig file:
+ "target": "es2016" ====> before
+ "target": "ESNext" ====> after
+
+ "module": "commonjs",  phly ye tha
+ "module": "NodeNext", replace is se krna h
+
+ // "moduleResolution": "node10",
+ "moduleResolution": "NodeNext",
+
+
+ // Setup ready for project:
