@@ -1,0 +1,108 @@
+Commands:
+1st command ===> npm init (for creating package.json file)
+2nd cpmmand ===> tsc --init (for creating tsconfig.json file)
+3rd command ===> npm i inquirer 
+4th command ===> npm i --save-dev @types/inquirer 
+
+Today Topic: Apny calculator ko npx se chalany k liye (Yani koi apka yr calculator aoni CLI me chala skta h)
+
+
+1st Step ==> #! /usr/bin/env node ye line add krni
+apni file k top pr ye line add krni h
+#! /usr/bin/env node
+or isy SHABANG khty hn or iska mtlb ye hota hai k ye code node pr run hoga hamen br br kisi ko btany ki zrorat nh pary gi
+
+
+
+2nd Step ===> bin add krna
+Add this line in package.json file "bin" : "index.js",
+type k bd add krna h nis line ko
+
+
+
+3rd Step ===> npm se login hona
+npm pr apna account create krna h
+or ye command run krni h
+npm login
+ye command run krny pr browser se apko npm login krna h
+complete ye response mily ga
+
+C:\Users\user\Desktop\Coding-Ground\Ramadan-Coding-nights\Day03 (19-02-2024)>npm login
+npm notice Log in on https://registry.npmjs.org/
+Login at:
+https://www.npmjs.com/login?next=/login/cli/1676fe4a-1771-4242-8658-4b048461eac5
+Press ENTER to open in the browser...
+
+Logged in on https://registry.npmjs.org/.
+
+yhn tk..
+
+4th Step ===> Apny code ko published krna
+
+is calculator ka nam unique rakhna h kiun k is name ("simple-calculator") se phly he kisi ne bnaya hoga mtlb same name se nh bna skty error de ga..
+
+command for publish ===> npm publish
+
+agr hum package.json ki file me name change nh krngy yani wahi name (simple-calculator) he rhny dengy to ye error aye ga
+
+====> error start
+C:\Users\user\Desktop\Coding-Ground\Ramadan-Coding-nights\Day03 (19-02-2024)>npm publish
+npm WARN publish npm auto-corrected some errors in your package.json when publishing.  Please run "npm pkg fix" to address these errors.
+npm WARN publish errors corrected:
+npm WARN publish "bin" was converted to an object
+npm notice
+npm notice 📦  simple-calculator@1.0.0
+npm notice === Tarball Contents ===
+npm notice 1.4kB  class-work.txt
+npm notice 964B   index.js
+npm notice 1.0kB  index.ts
+npm notice 428B   package.json
+npm notice 12.4kB tsconfig.json 
+npm notice === Tarball Details ===
+npm notice name:          simple-calculator
+npm notice version:       1.0.0
+npm notice filename:      simple-calculator-1.0.0.tgz
+npm notice package size:  5.1 kB
+npm notice unpacked size: 16.2 kB
+npm notice shasum:        58eccb9cad97faab70b0675bbee72854af930e17
+npm notice integrity:     sha512-ch/v/DvwI2C53[...]NOL4Alq9KeTiQ==
+npm notice total files:   5
+npm notice
+npm notice Publishing to https://registry.npmjs.org/ with tag latest and default access
+npm ERR! code E403
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/simple-calculator - Package name too similar to existing packages simplecalculator,simple_calculator; try renaming your package to '@mnasirkhan/simple-calculator' and publishing with 'npm publish --access=public' instead  
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy, or
+npm ERR! 403 on a server you do not have access to.
+
+npm ERR! A complete log of this run can be found in: C:\Users\user\AppData\Local\npm-cache\_logs\2024-03-29T06_46_03_404Z-debug-0.log 
+
+====> error end
+
+package ban giya h is name se ( mnasirkhan-simple-calculator@1.0.0)
+ab hum is package ko npx k zariye kisi or k system me b use kr sakty hn npx se
+#npx 1 package runner h jo without installing ap different packages ko run kr sakty hn right away..
+
+npx (apny package ka name jo hum ne unique diya h)
+npx mnasirkhan-simple-calculator
+
+yhn hum se 1 mistake ho gai wo ye k hum ne index.ts ki file me changing toh kr li but index.js ki file reh gai hum se yani humen changing krny k bd "tsc" krna chahiye tha jis se sari changing index.js ki file men b ho jati hai.
+
+tsc krny k bd hum ne apny package ko update b krna hoga mtlb hum ne apny program me changing ki or again publish kr dena h (package.json ki file me version ko "version": "1.0.0" se change kr k "version": "1.0.1" kr dena h)
+
+ye changing krny k bd npm publish ki command run krni h
+
+Successfully run....!!!
+
+
+#Version:
+
+is waqt hmary pas ye version h (version": "1.0.1")
+"version": 1.0.1
+1st waly digit ko update tab krty hn jb koi major changing krty hn
+2nd waly digit ko tab update krty hn jb choti c changing ki ho (minor release k liye)
+3rd last waly digit ko jo abi hum ne change kiya ye small fixes k liye (patch release k liye :jo abi hum se hoi thi)
+
+1st wala digit tb change hoga jb hum is calculator me koi major changing yani koi functinal add krny ga like (Remainder %)
+ya Exponentiation ** (power) operator ko add kren gy toh ye major changing khlai gi toh ab hmara version update ho jaye ga aisy(version": "2.0.1")
+
