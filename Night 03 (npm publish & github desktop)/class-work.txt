@@ -7,7 +7,7 @@ Commands:
 Today Topic: Apny calculator ko npx se chalany k liye (Yani koi apka yr calculator aoni CLI me chala skta h)
 
 
-1st Step ==> #! /usr/bin/env node ye line add krni
+1st Step ==> #! /usr/bin/env node (ye line top me add krni h .ts ki file me)
 apni file k top pr ye line add krni h
 #! /usr/bin/env node
 or isy SHABANG khty hn or iska mtlb ye hota hai k ye code node pr run hoga hamen br br kisi ko btany ki zrorat nh pary gi
