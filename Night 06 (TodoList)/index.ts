@@ -24,5 +24,5 @@ while(todoCondition){
     todos.push(todoQuestions.firstQuestion);
     console.log(todos);
     todoCondition = todoQuestions.seondQuestion
-}
+};
 
